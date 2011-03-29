@@ -85,7 +85,16 @@ Signal::StackTrace::CarpLike - install signal handler to print a Carp-like stack
 
     use Signal::StackTrace::CarpLike qw( FOOBAR );
 
+    # use it from the command line
+    perl -MSignal::StackTrace::CarpLike=INT hanging-test.t
+
 =head1 DESCRIPTION
+
+This module is a fork of L<Signal::StackTrace>,
+which has a uselessly verbose output format. But
+its interface is perfect, hence this module, which
+just uses L<Carp/cluck>.
+
 
 This will print a stack trace to STDERR -- 
 similar to the sigtrap module but without the 
