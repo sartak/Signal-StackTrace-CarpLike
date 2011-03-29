@@ -26,58 +26,6 @@ my %known_sigz  = ();
 
 @known_sigz{ split ' ', $Config{ sig_name } } = ();
 
-# see perldoc -f caller for the correct order.
-
-my @headerz =
-qw
-(
-    Package
-    Filename
-    Line-No
-    Subroutine
-    Hasargs
-    Wantarray
-    Evaltext
-    Require
-    Hints
-    Bitmask
-);
-
-########################################################################
-# private utility subs
-########################################################################
-
-my $print_list
-= sub
-{
-    local $Data::Dumper::Purity     = 0;
-    local $Data::Dumper::Terse      = 1;
-    local $Data::Dumper::Indent     = 1;
-    local $Data::Dumper::Deparse    = 1;
-    local $Data::Dumper::Sortkeys   = 1;
-    local $Data::Dumper::Deepcopy   = 0;
-    local $Data::Dumper::Quotekeys  = 0;
-
-    print STDERR join "\n", map { ref $_ ? Dumper $_ : $_ } @_
-};
-
-my $stack_trace
-= sub
-{
-    my %data = ();
-
-    for( my $i = 0 ; my @caller = caller $i ; ++$i )
-    {
-        @data{ @headerz } = @caller;
-
-        $print_list->( "Caller level $i:", \%data );
-    }
-
-    $print_list->( "End of trace" );
-
-    return
-};
-
 ########################################################################
 # install the signal handlers
 ########################################################################
@@ -97,13 +45,13 @@ sub import
         }
 
         # all the signals are known, install them all
-        # with the stack_trace handler.
+        # with the cluck handler.
 
-        @SIG{ @_ } = ( $stack_trace ) x @_;
+        @SIG{ @_ } = ( \&Carp::cluck ) x @_;
     }
     else
     {
-        $SIG{ USR1 } = $stack_trace;
+        $SIG{ USR1 } = \&Carp::cluck;
     }
 
     return
