@@ -103,40 +103,18 @@ Config.pm ( see $Config{ sig_name } ).
 
 The stack trace looks something like:
 
-  Caller level 1:
-  {
-    Bitmask => '',
-    Evaltext => undef,
-    Filename => '(eval 9)[/usr/lib/perl5/site_perl/5.8.8/i686-linux/Term/ReadKey.pm:411]',
-    Hasargs => 0,
-    Hints => 0,
-    'Line-No' => 7,
-    Package => 'Term::ReadKey',
-    Require => undef,
-    Subroutine => '(eval)',
-    Wantarray => 0
-  }
-
-  ...
-
-  Caller level 8:
-  {
-    Bitmask => '',
-    Evaltext => undef,
-    Filename => '-e',
-    Hasargs => 0,
-    Hints => 0,
-    'Line-No' => 1,
-    Package => 'main',
-    Require => undef,
-    Subroutine => 'DB::DB',
-    Wantarray => 1
-  }
-
-
-  End of trace
-
-
+    INT at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 3749
+            eval {...} called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 3749
+            Term::ReadLine::Gnu::AU::__ANON__[/Users/sartak/.perl/perls/perl-5.12.3/lib/site_perl/5.12.3/darwin-2level/Term/ReadLine/Gnu.pm:719]('Term::ReadLine=HASH(0x10099a6e0)', '\x{1}\x{1b}[4m\x{2}  DB<1> \x{1}\x{1b}[24m\x{2}') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/site_perl/5.12.3/darwin-2level/Term/ReadLine/Gnu.pm line 331
+            Term::ReadLine::Gnu::readline('Term::ReadLine=HASH(0x10099a6e0)', '  DB<1> ') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 6494
+            DB::readline('  DB<1> ') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 2241
+            DB::DB called at -e line 1
+    at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 3749
+            eval {...} called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 3749
+            Term::ReadLine::Gnu::AU::__ANON__[/Users/sartak/.perl/perls/perl-5.12.3/lib/site_perl/5.12.3/darwin-2level/Term/ReadLine/Gnu.pm:719]('Term::ReadLine=HASH(0x10099a6e0)', '\x{1}\x{1b}[4m\x{2}  DB<1> \x{1}\x{1b}[24m\x{2}') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/site_perl/5.12.3/darwin-2level/Term/ReadLine/Gnu.pm line 331
+            Term::ReadLine::Gnu::readline('Term::ReadLine=HASH(0x10099a6e0)', '  DB<1> ') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 6494
+            DB::readline('  DB<1> ') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 2241
+            DB::DB called at -e line 1
 
 =head1 KNOWN BUGS
 
