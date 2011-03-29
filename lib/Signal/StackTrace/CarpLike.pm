@@ -20,7 +20,7 @@ use Data::Dumper;
 # package variables
 ########################################################################
 
-our $VERSION = 0.04;
+our $VERSION = 0.01;
 
 my %known_sigz  = ();
 
