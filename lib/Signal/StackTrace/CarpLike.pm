@@ -117,7 +117,7 @@ __END__
 
 =head1 NAME
 
-Signal::StackTrace::CarpLike - install signal handler to print a stacktrace.
+Signal::StackTrace::CarpLike - install signal handler to print a Carp-like stacktrace
 
 =head1 SYNOPSIS
 
@@ -216,7 +216,12 @@ names.
 
 =head1 AUTHOR
 
-Steven Lembark <lembark@wrkhors.com>
+Shawn M Moore <sartak@gmail.com>
+
+=head2 ORIGINAL AUTHOR
+
+Steven Lembark <lembark@wrkhors.com> was the original author of
+L<Signal::StackTrace> from which this module was forked.
 
 =head1 LICENSE
 
