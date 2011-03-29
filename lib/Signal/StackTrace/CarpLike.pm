@@ -69,8 +69,8 @@ Signal::StackTrace::CarpLike - install signal handler to print a Carp-like stack
 
 =head1 SYNOPSIS
 
-    # default installs the handler on USR1
-    # these have the same result.
+    # default installs the handler on USR1,
+    # so these have the same result.
 
     use Signal::StackTrace::CarpLike;
     use Signal::StackTrace::CarpLike qw( USR1 );
@@ -85,7 +85,7 @@ Signal::StackTrace::CarpLike - install signal handler to print a Carp-like stack
 
     use Signal::StackTrace::CarpLike qw( FOOBAR );
 
-    # use it from the command line
+    # use me from the command line
     perl -MSignal::StackTrace::CarpLike=INT hanging-test.t
 
 =head1 DESCRIPTION
@@ -100,11 +100,11 @@ This will print a stack trace to STDERR --
 similar to the sigtrap module but without the 
 core dump using simpler syntax.
 
-The module arguemts are signals on which to 
+The module arguments are signals on which to 
 print the stack trace. For normally-terminating
-signals (e.g., TERM, QUIT) it is proably a bad
+signals (e.g., TERM, QUIT) it is probably a bad
 idea in production environments but would be
-handy for tracking down errors; for non-trapable
+handy for tracking down errors; for non-trappable
 signals (e.g., KILL) this won't do anything.
 
 The import will croak on signal names unknown to 
