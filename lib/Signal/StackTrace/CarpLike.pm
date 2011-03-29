@@ -1,11 +1,11 @@
 ########################################################################
-# Signal::StackTrace - run a stack dump on a signal.
+# Signal::StackTrace::CarpLike - run a stack dump on a signal.
 ########################################################################
 ########################################################################
 # housekeeping
 ########################################################################
 
-package Signal::StackTrace;
+package Signal::StackTrace::CarpLike;
 
 use 5.006;
 
@@ -117,25 +117,25 @@ __END__
 
 =head1 NAME
 
-Signal::StackTrace - install signal handler to print a stacktrace.
+Signal::StackTrace::CarpLike - install signal handler to print a stacktrace.
 
 =head1 SYNOPSIS
 
     # default installs the handler on USR1
     # these have the same result.
 
-    use Signal::Stacktrace;
-    use Signal::Stacktrace qw( USR1 );
+    use Signal::StackTrace::CarpLike;
+    use Signal::StackTrace::CarpLike qw( USR1 );
 
     # install the handler on any valid signals
 
-    use Signal::Stacktrace qw( HUP );
-    use Signal::Stacktrace qw( HUP USR1 USR2 );
+    use Signal::StackTrace::CarpLike qw( HUP );
+    use Signal::StackTrace::CarpLike qw( HUP USR1 USR2 );
 
     # this will fail: FOOBAR is not a valid
     # signal (on any system I know of at least).
 
-    use Signal::Stacktrace qw( FOOBAR );
+    use Signal::StackTrace::CarpLike qw( FOOBAR );
 
 =head1 DESCRIPTION
 
