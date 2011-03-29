@@ -116,12 +116,6 @@ The stack trace looks something like:
             Term::ReadLine::Gnu::readline('Term::ReadLine=HASH(0x10099a6e0)', '  DB<1> ') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 6494
             DB::readline('  DB<1> ') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 2241
             DB::DB called at -e line 1
-    at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 3749
-            eval {...} called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 3749
-            Term::ReadLine::Gnu::AU::__ANON__[/Users/sartak/.perl/perls/perl-5.12.3/lib/site_perl/5.12.3/darwin-2level/Term/ReadLine/Gnu.pm:719]('Term::ReadLine=HASH(0x10099a6e0)', '\x{1}\x{1b}[4m\x{2}  DB<1> \x{1}\x{1b}[24m\x{2}') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/site_perl/5.12.3/darwin-2level/Term/ReadLine/Gnu.pm line 331
-            Term::ReadLine::Gnu::readline('Term::ReadLine=HASH(0x10099a6e0)', '  DB<1> ') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 6494
-            DB::readline('  DB<1> ') called at /Users/sartak/.perl/perls/perl-5.12.3/lib/5.12.3/perl5db.pl line 2241
-            DB::DB called at -e line 1
 
 =head1 KNOWN BUGS
 
